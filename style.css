@@ -4,9 +4,13 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Poppins", sans-serif;
-    color: rgb(206, 189, 227);
+    color: rgb(163, 147, 182);
     background-color: #060231;
 }
 
@@ -16,9 +20,21 @@ h1 {
     margin-bottom: .8rem;
 }
 
+h2 {
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
 a {
     text-decoration: none;
-    color: #fff;
+    color: rgb(163, 147, 182);
 }
 
 .container {
@@ -28,12 +44,42 @@ a {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    height: 100vh;
+    padding: 20px;
+    height: 90vh;
+    gap: 10px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+    z-index: 1;
+}
+
+.nav-btn {
+    margin: 0 10px;
+    padding: 10px 20px;
+    margin-top: 30px;
+    border: none;
+    border-radius: 10px;
+    background-color: transparent;
+    font-weight: 900;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.nav-btn:hover,
+.nav-btn.active,
+.nav-btn:focus {
+    transform: scale(1.1);
+    text-shadow: 0 0 20px #b31eff, 0 0 30px #b31eff, 0 0 50px #b31eff, 0 0 70px #b31eff;
 }
 
 .splash-image {
     position: absolute;
-    top: 150px;
+    top: 90px;
     right: 50px;
     width: 500px;
     height: 100vh;
@@ -65,7 +111,6 @@ a {
     border: none;
     border-radius: 10px;
     background-color: #4d038e;
-    color: #fff;
     font-weight: 700;
     cursor: pointer;
     box-shadow: 0 0 15px #820ce8, 0 0 25px #820ce8, 0 0 40px #820ce8, 0 0 60px #820ce8;
@@ -77,8 +122,33 @@ a {
     box-shadow: 0 0 20px #b31eff, 0 0 30px #b31eff, 0 0 50px #b31eff, 0 0 70px #b31eff;
 }
 
+/* About */
 
-@media screen and (max-width: 768px) {
+.content {
+    border-radius: 20px; /* Rounded corners */
+    width: 50%;
+    padding: 27px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.279); /* Subtle shadow for depth */
+    text-align: left;
+    transition: all 0.3s ease-in-out;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.icons {
+    font-size: 1.5rem;
+    padding: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+
+@media screen and (max-width: 1024px) {
 
     h1 {
         font-size: 3rem;
@@ -87,13 +157,12 @@ a {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 100dvh;
     }
 
     .splash-image {
         width: 80%;
-        right: 30px;
-        top: 70px;
+        left: 50%;
+        transform: translate(-50%, 0);
     }
 
     .splash-text {
@@ -102,6 +171,14 @@ a {
         text-align: center;
         margin-top: 170px;
         align-items: center;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .content {
+        width: 100%;
     }
     
 }
