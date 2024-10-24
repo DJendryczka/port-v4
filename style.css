@@ -10,8 +10,8 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  color: rgb(163, 147, 182);
-  background-color: #060231;
+  color: rgb(188, 171, 209);
+  background: linear-gradient(to top left, #000000 50%, #0f033d 70%, #170368 100%);
 }
 
 h1 {
@@ -45,11 +45,12 @@ a {
 }
 
 nav {
+  width: 1200px;
+  margin: 0 auto;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  width: 100%;
-  padding: 0 10px;
+  padding: 20px 10px;
   z-index: 1;
 }
 
@@ -161,6 +162,11 @@ nav {
   transition: 0.3s ease-in-out;
 }
 
+.icons:hover {
+  text-shadow: 0 0 20px #b31eff, 0 0 30px #b31eff, 0 0 50px #b31eff,
+  0 0 70px #b31eff;
+}
+
 .skills {
   display: flex;
   flex-wrap: wrap;
@@ -194,6 +200,10 @@ nav {
 }
 
 @media screen and (max-width: 1024px) {
+
+  body {
+    background: linear-gradient(to top, #000000 80%, #0f033d 95%, #170368 100%);
+  }
   h1 {
     font-size: 3.2rem;
   }
