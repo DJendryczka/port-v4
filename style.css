@@ -268,7 +268,7 @@ nav {
   }
 
   .image-one::before, .image-two::before, .image-tree::before, .image-four::before {
-    background-color: rgba(0, 0, 139, 0.8); /* Dark overlay always visible */
+    background-color: rgba(0, 0, 139, 0.405); /* Dark overlay always visible */
   }
 }
 
