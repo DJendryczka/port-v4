@@ -1,171 +1,120 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="Images/Darek.png" />
+    <meta name="description" content="Dariusz Jendryczka — automotive electronics technician and self-taught software developer building practical web applications and business websites." />
+    <link rel="icon" type="image/png" href="images/favicon-32x32.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <script
-      src="https://kit.fontawesome.com/47ab2ddb0f.js"
-      crossorigin="anonymous"
-    ></script>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
-    <title>Dariusz Jendryczka</title>
+    <title>Dariusz Jendryczka — Software Builder</title>
   </head>
   <body>
-    <nav>
-      <div class="logo"><a href="#" class="nav-btn">DJ</a></div>
-      <div class="nav-links">
-        <a href="#about" class="nav-btn">ABOUT</a>
-        <a href="#projects" class="nav-btn">PROJECTS</a>
-        <a href="#contact" class="nav-btn">CONTACT</a>
-      </div>
-    </nav>
-    <main id="home" class="container">
-      <div class="splash-wrapper">
-        <div class="splash-text">
-          <h2>Hi, I'm Dariusz</h2>
-          <h1>Front-end Developer</h1>
-          <h2>LET'S BUILD SOMETHING TOGETHER</h2>
-          <a href="#about" class="btn">About me</a>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Dariusz Jendryczka, home">
+        <span class="brand-mark">DJ</span><span class="brand-name">Dariusz Jendryczka</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation"><span></span><span></span></button>
+      <nav id="primary-navigation" class="site-nav" aria-label="Primary navigation">
+        <a href="#work">Work</a><a href="#story">Story</a><a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section id="top" class="hero section-shell">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span></span> Automotive electronics × software</p>
+          <h1>I diagnose problems.<br /><em>Then I build solutions.</em></h1>
+          <p class="hero-intro">I’m Dariusz — an automotive electronics technician and self-taught software developer based in Sweden. I build practical web applications and business websites with a problem-first mindset.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#work">See selected work <span>↘</span></a>
+            <a class="text-link" href="#story">Read my story <span>↓</span></a>
+          </div>
         </div>
-        <div class="splash-image">
-          <img src="images/Darek.png" alt="Hero image" />
+        <div class="diagnostic-panel reveal" aria-label="How I approach my work">
+          <div class="panel-topline"><span>Two disciplines</span><span>One mindset</span></div>
+          <ol class="process-list">
+            <li><span class="process-number">01</span><div><strong>Diagnose</strong><p>Understand the system before changing it.</p></div><span class="process-status">Signal</span></li>
+            <li><span class="process-number">02</span><div><strong>Build</strong><p>Turn real needs into useful software.</p></div><span class="process-status">Logic</span></li>
+            <li><span class="process-number">03</span><div><strong>Improve</strong><p>Test, learn and make the next version better.</p></div><span class="process-status">Progress</span></li>
+          </ol>
+          <div class="panel-footer"><span class="pulse-dot"></span><span>C# / .NET</span><span>Blazor / MAUI</span><span>SQL / Web</span></div>
         </div>
-      </div>
+      </section>
+
+      <section id="work" class="work-section section-shell">
+        <div class="section-heading reveal">
+          <div><p class="eyebrow"><span></span> Selected work</p><h2>Built to solve,<br />not just to impress.</h2></div>
+          <p>A selection of learning projects and real business websites. Each one helped me move beyond individual screens and think about the complete experience.</p>
+        </div>
+
+        <article class="project project-featured reveal">
+          <a class="project-image" href="https://accvero.se" target="_blank" rel="noreferrer"><img src="images/accvero-latest.jpg" alt="Current Accvero accounting application homepage" /><span class="image-action">Open project ↗</span></a>
+          <div class="project-content">
+            <div class="project-meta"><span>01</span><span>Capstone project</span></div>
+            <h3>Accvero</h3>
+            <p>A full-stack accounting application created as a capstone project. It brings together authentication, roles, dashboards, invoicing workflows and administration in one coherent product.</p>
+            <ul class="tag-list" aria-label="Technologies used"><li>.NET</li><li>Blazor</li><li>SQL</li><li>Product UX</li></ul>
+            <a class="project-link" href="https://accvero.se" target="_blank" rel="noreferrer">Visit Accvero <span>↗</span></a>
+          </div>
+        </article>
+
+        <div class="project-grid">
+          <article class="project project-card reveal">
+            <a class="project-image" href="https://dsdkonsult.se" target="_blank" rel="noreferrer"><img src="images/dsdkonsult.jpg" alt="DSD Konsult website homepage" /><span class="image-action">Open website ↗</span></a>
+            <div class="project-content">
+              <div class="project-meta"><span>02</span><span>Business website &amp; portal</span></div>
+              <h3>DSD Konsult</h3>
+              <p>A business website combining a clear company presentation with account, administration and customer-facing features.</p>
+              <ul class="tag-list" aria-label="Project focus"><li>.NET</li><li>Blazor</li><li>UX</li></ul>
+              <a class="project-link" href="https://dsdkonsult.se" target="_blank" rel="noreferrer">Visit website <span>↗</span></a>
+            </div>
+          </article>
+
+          <article class="project project-card reveal">
+            <a class="project-image" href="https://www.garantistad.se" target="_blank" rel="noreferrer"><img src="images/garantistad.jpg" alt="Garanti-Städ website homepage" /><span class="image-action">Open website ↗</span></a>
+            <div class="project-content">
+              <div class="project-meta"><span>03</span><span>Business website</span></div>
+              <h3>Garanti-Städ</h3>
+              <p>A modern website for an established cleaning company in Lund, designed to make services, trust signals and contact information easy to find.</p>
+              <ul class="tag-list" aria-label="Project focus"><li>Responsive web</li><li>SEO</li><li>Content UX</li></ul>
+              <a class="project-link" href="https://www.garantistad.se" target="_blank" rel="noreferrer">Visit website <span>↗</span></a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="story" class="story-section">
+        <div class="section-shell story-layout">
+          <div class="story-title reveal"><p class="eyebrow eyebrow-light"><span></span> My journey</p><h2>My route into software wasn’t conventional.</h2></div>
+          <div class="story-copy reveal">
+            <p class="story-lead">I started with automotive electronics, where every fault requires patience, logic and careful diagnosis.</p>
+            <p>Programming began as a curiosity and became another way to solve problems. I learned the front end first, then moved deeper into C#, .NET, databases, authentication and the structure behind complete applications.</p>
+            <p>I still approach software like a technician: understand what is happening, find the real cause and build something that works in practice.</p>
+          </div>
+          <ol class="journey-list reveal">
+            <li><span>01</span><div><strong>Automotive electronics</strong><p>Diagnosis, systems thinking and responsibility for real outcomes.</p></div></li>
+            <li><span>02</span><div><strong>Learning by building</strong><p>From first interfaces to applications connected to real data.</p></div></li>
+            <li><span>03</span><div><strong>Complete products</strong><p>UX, application logic, access control, databases and deployment.</p></div></li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="contact" class="contact-section section-shell reveal">
+        <p class="eyebrow"><span></span> Get in touch</p>
+        <div class="contact-layout">
+          <h2>Have an idea or simply want to talk technology?</h2>
+          <div class="contact-copy"><p>I’m always interested in practical software, automotive technology and the process of turning an idea into something real.</p><a class="button button-dark" href="mailto:dariusz.jendryczka@gmail.com">Send me an email <span>↗</span></a></div>
+        </div>
+      </section>
     </main>
-    <section id="about" class="container">
-      <div class="content-wrapper">
-        <div class="content">
-          <h2>About me</h2>
-          <p>
-            I'm a front-end developer focused on building responsive and visually engaging web applications. Currently, I'm expanding my skills by learning back-end technologies to become a more versatile developer. I'm passionate about creating, learning, and pushing boundaries—always striving to move forward, because growth is what keeps us truly alive<span class="dot-blink"
-              >.</span
-            >
-          </p>
-          <div class="socials">
-            <a
-              href="https://github.com/DJendryczka?tab=repositories"
-              target="_blank"
-              class="icons"
-            >
-              <i class="fab fa-github"></i>
-            </a>
-            <a
-              href="https://linkedin.com/in/20211975dariusz-jendryczka-ab062834"
-              target="_blank"
-              class="icons"
-            >
-              <i class="fab fa-linkedin"></i>
-            </a>
-          </div>
-        </div>
-        <div class="content skills">
-          <div class="skill-icon">
-            <img src="images/skills/html.png" alt="html icon" width="50" />
-          </div>
-          <div class="skill-icon">
-            <img src="images/skills/css.png" alt="html icon" width="50" />
-          </div>
-          <div class="skill-icon">
-            <img
-              src="images/skills/javascript.png"
-              alt="html icon"
-              width="50"
-            />
-          </div>
-          <div class="skill-icon">
-            <img src="images/skills/c-logo.png" alt="html icon" width="50" />
-          </div>
-          <div class="skill-icon">
-            <img src="images/skills/github1.png" alt="html icon" width="50" />
-          </div>
-          <div class="skill-icon">
-            <img src="images/skills/react.png" alt="html icon" width="50" />
-          </div>
-          <div class="skill-icon">
-            <img src="images/skills/Blazor.png" alt="html icon" width="50" />
-          </div>
-          <div class="skill-icon">
-            <img src="images/skills/firebase.png" alt="html icon" width="50" />
-          </div>
-          <div class="skill-icon">
-            <img src="images/skills/tailwind.png" alt="html icon" width="50" />
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="projects" class="container">
-      <div class="grid">
-        <div class="image-one">
-          <img src="images/accvero.png" alt="" />
-          <a
-            href="https://accvero.se"
-            target="_blank"
-            class="link-overlay"
-            >View Project</a
-          >
-        </div>
-        <div class="image-two">
-          <img src="images/skanor.jpg" alt="" />
-          <a
-            href="https://skanorsservice.se"
-            target="_blank"
-            class="link-overlay"
-            >View Project</a
-          >
-        </div>
-        <!-- <div class="image-tree">
-          <img src="images/sweet.jpg" alt="" />
-          <a href="#" class="link-overlay">View Project</a>
-        </div>
-        <div class="image-four">
-          <img src="images/treek.png" alt="" />
-          <a href="https://treek.se" target="_blank" class="link-overlay"
-            >View Project</a
-          >
-        </div> -->
-      </div>
-    </section>
-    <section id="contact" class="container">
-      <div class="contact-wrapper">
-        <h2>Contact</h2>
-        <p>
-          Feel free to reach out—let’s discuss how we can work together!
-        </p>
-        <h3><span>Connect</span> With Me</h3>
-        <div class="contact-icons">
-          <a
-            href="https://github.com/DJendryczka?tab=repositories"
-            target="_blank"
-            class="icons"
-          >
-            <i class="fab fa-github"></i>
-          </a>
-          <a
-            href="https://linkedin.com/in/20211975dariusz-jendryczka-ab062834"
-            target="_blank"
-            class="icons"
-          >
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a
-            href="mailto:dariusz.jendryczka@gmail.com"
-            target="_blank"
-            class="icons"
-          >
-            <i class="far fa-envelope"></i>
-          </a>
-        </div>
-      </div>
-    </section>
-    <footer class="container">
-      <p>&copy; 2025 Dariusz Jendryczka</p>
+
+    <footer class="site-footer section-shell">
+      <p>© <span id="current-year">2026</span> Dariusz Jendryczka</p>
+      <div class="footer-links"><a href="https://github.com/DJendryczka" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://linkedin.com/in/20211975dariusz-jendryczka-ab062834" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="#top">Back to top ↑</a></div>
     </footer>
     <script src="script.js"></script>
   </body>
