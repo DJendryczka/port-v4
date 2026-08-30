@@ -70,7 +70,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .section-heading > p { max-width: 430px; padding-bottom: 8px; color: var(--ink-soft); font-size: 17px; }
 .project { border-top: 1px solid var(--line); }
 .project-featured { padding-block: 34px 100px; display: grid; grid-template-columns: 1.25fr 0.75fr; gap: clamp(40px, 7vw, 92px); }
-.project-image { position: relative; overflow: hidden; min-height: 420px; background: #dfe1d8; border-radius: var(--radius); }
+.project-image { position: relative; overflow: hidden; width: 100%; min-height: 420px; display: block; background: #dfe1d8; border-radius: var(--radius); }
 .project-image::after { position: absolute; inset: 0; background: linear-gradient(180deg, transparent 60%, rgb(0 0 0 / 24%)); content: ""; opacity: 0; transition: opacity var(--transition); }
 .project-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 500ms cubic-bezier(0.2, 0.7, 0.2, 1); }
 .project-image:hover img { transform: scale(1.025); }
@@ -83,10 +83,12 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .tag-list { margin-top: 26px; display: flex; flex-wrap: wrap; gap: 8px; list-style: none; }
 .tag-list li { padding: 7px 11px; border: 1px solid var(--line); border-radius: 100px; color: var(--ink-soft); font-size: 11px; font-weight: 600; }
 .project-link { margin-top: 34px; }
-.project-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 34px; }
-.project-card { padding-top: 34px; }
+.project-grid { padding-bottom: 40px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: stretch; gap: 34px; }
+.project-card { min-width: 0; padding-top: 34px; display: grid; grid-template-rows: auto 1fr; }
 .project-card .project-image { aspect-ratio: 1.4; min-height: 0; }
-.project-card .project-content { padding-top: 28px; }
+.project-card .project-content { min-height: 350px; padding-top: 28px; display: flex; flex-direction: column; align-items: flex-start; }
+.project-card .project-meta { width: 100%; }
+.project-card .project-link { margin-top: auto; padding-top: 34px; }
 .project-card h3 { font-size: clamp(34px, 3.4vw, 48px); }
 
 .story-section { padding-block: clamp(100px, 12vw, 180px); background: var(--dark); color: var(--white); }
@@ -151,6 +153,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .project-grid { grid-template-columns: 1fr; gap: 78px; }
   .project-image { min-height: 290px; }
   .project-card .project-image { aspect-ratio: 1.2; }
+  .project-card .project-content { min-height: 0; }
   .image-action { opacity: 1; }
   .journey-list li { min-height: 180px; grid-template-columns: 44px 1fr; gap: 10px; }
   .site-footer { padding-block: 34px; align-items: flex-start; flex-direction: column; }
